@@ -1,14 +1,14 @@
 var $, users, firstname, lastname, phone, femail, fpassword, repassword, refferal, ischecked;
 
+users = [];
 window.onload = function () {
     users = JSON.parse(window.localStorage.getItem('Users'));
-}
+};
 
 
 function newregister() {
     var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
     var passwordRegex = /^.*(?=.{6,10})(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).*$/;
-
 
     firstname = document.regform.fname.value;
     lastname = document.regform.lname.value;
@@ -65,8 +65,6 @@ function newregister() {
             're-password': repassword,
             'Refferal': refferal,
         }
-
-
         users.push(map);
         window.localStorage.setItem('Users', JSON.stringify(users));
 

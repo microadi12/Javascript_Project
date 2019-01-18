@@ -25,7 +25,7 @@ function Submit() {
 
     if (femail !== '' && fpassword !== '') {
 
-        for (i = 0; users.length >= i; i + 1) {
+        for (i = 0; users.length > i; i++) {
             if (users[i].email === femail) {
                 if (users[i].password === fpassword) {
                     alert('Login Successfully');
