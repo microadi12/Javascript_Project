@@ -1,0 +1,363 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffc185;
+    font-size:16px;
+}
+
+.container{
+    position:absolute;
+    width: auto;
+    height:auto;
+    top: calc(50% - 240px);
+    left: calc(50% - 160px);
+}
+
+.span-success{
+	color: green;
+    position: relative;
+    top: -23px;
+    font-size: 1.4rem;
+}
+
+form {
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 310px;
+    
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #87613d;
+    margin-bottom: 40px;
+}
+
+p > span {
+    padding-top: 3px;
+    display: block;
+    font-weight: 400;
+    font-size: 9px;
+}
+
+h3 {
+        font-family: 'Dosis';
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #87613d;
+    margin-bottom: 20px;
+   margin-top: -22px;
+}
+}
+
+input,
+button{
+    outline: none !important; 
+}
+
+
+
+button.form-btn {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 0;
+    border: 0;
+    font-family: 'Dosis';
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button.form-btn.sx {
+    left: 0;
+    border-radius: 0 0 0 5px;
+    background-color: rgba(255, 125, 0, 0.35);
+    color: #fff;
+    transition:all 0.3s linear;
+}
+
+button.form-btn.sx:hover {
+    background-color:rgba(255, 125, 0, 0.65);
+    color: #fff;
+}
+
+button.form-btn.sx.back {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition:all 0.3s linear;
+}
+
+button.form-btn.sx.back:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+button.form-btn.dx {
+    right: 0;
+    border-radius: 0 0 5px 0;
+    background-color: #ff7d00;
+    color: #fff;
+}
+
+
+input {
+    border: none;
+    border: 1px solid #ffc185;
+    width: 85%;
+    font-family: 'Roboto';
+    color: #ff7d00;
+    text-align: center;
+    font-size: 21px;
+    font-weight:100;
+    margin-bottom:15px;
+}
+
+#terms{
+    margin-left: -1px;
+}
+
+.terms-text{
+    margin-left: 
+}
+
+::-webkit-input-placeholder {
+   color: #ffc185;
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+:-moz-placeholder {
+   color: #ffc185;  
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+::-moz-placeholder {
+   color: #ffc185;  
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+:-ms-input-placeholder {  
+   color: #ffc185; 
+    font-family: 'Roboto';
+    font-weight:100;
+}
+
+.signIn input,
+.signUp .w100 {
+    width: 100%;
+}
+
+.signIn{
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+    height: 476px;
+}
+
+.signUp {
+   z-index: 2;
+    height: 560px;
+    
+    top: -23px;
+}
+
+
+
+.active-dx{
+    animation-name: foregrounding-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.active-sx{
+    animation-name: foregrounding-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-dx{
+    animation-name: overshadowing-dx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.inactive-sx{
+    animation-name: overshadowing-sx;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overshadowing-dx {
+    0%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+        z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes overshadowing-sx {
+    0%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+        box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    }
+    100%{
+        z-index: 1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes foregrounding-dx {
+    0%{
+        z-index:1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50%{
+        z-index:2;
+        transform: perspective(100px) translate3d(400px, 0px, -30px);
+    }
+    100%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes foregrounding-sx {
+    0%{
+        z-index:1;
+        transform: perspective(100px) translate3d(-100px, 0px, -30px);
+        opacity: 0.5;
+    }
+    50%{
+        z-index:2;
+        transform: perspective(100px) translate3d(-400px, 0px, -30px);
+    }
+    100%{
+        z-index:2;
+        transform: perspective(100px) translate3d(0px, 0px, 0px);
+        opacity: 1;
+    }
+}
+
+.check-container {
+    width: 100%;
+}
+
+.check_content {
+    width: 10%;
+    height: 20px;
+    border: 1px solid #ddd;
+    float: left;
+    padding-left: 20px;
+}
+
+.check_terms {
+    width: 80%;
+    height: 20px;
+    border: 1px solid #ddd;
+    float: right;
+    font-size: 1.3rem;
+}
+.rc-anchor-light.rc-anchor-normal {
+    border: 1px solid #d3d3d3;
+}
+styles__ltr.css:1
+.rc-anchor-light {
+    background: #f9f9f9;
+    color: #000;
+}
+styles__ltr.css:1
+.rc-anchor-normal {
+    height: 74px;
+    width: 88%;
+}
+styles__ltr.css:1
+.rc-anchor {
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+}
+user agent stylesheet
+div {
+    display: block;
+}
+margin?
+?border1
+1padding?
+?240 × 74?
+?1
+1?
+?
+
+Filter
+
+Show all
+background-attachment:
+scroll
+;
+background-clip:
+border-box
+;
+background-color:
+rgb(249, 249, 249)
+;
+background-image:
+none
+;
+background-origin:
+padding-box
+;
+background-position-x:
+0%
+
+
+.recatcha_container {
+    width: 80%;
+}
+
+.recatcha_container iframe {
+    position: relative;
+    margin-left: -32px;
+    width: 100%;
+}
+
+
+.control {
+        color: #ff7d00;
+        font-size: 18px;
+        padding: 0.2rem 1.75rem;
+        border: 1px solid #ffc185;
+    
+}
+.swal-text{
+        text-align: center;
+    
+    font-weight: 700;
+    color: rgba(187, 74, 99, 0.64);
+}
