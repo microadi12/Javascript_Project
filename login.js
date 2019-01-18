@@ -1,13 +1,11 @@
+var femail, fpassword, i, $, ecount, femaillength, emaillength;
 var users = [];
 
 function Submit() {
     var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
     users = JSON.parse(window.localStorage.getItem('Users'));
-    console.log(users.length);
-    console.log(users);
-    console.log(users[0].Firstname);
-    var femail = document.form.email.value,
-        fpassword = document.form.password.value;
+    femail = document.form.email.value;
+    fpassword = document.form.password.value;
 
 
     if (femail === "") {
@@ -25,9 +23,9 @@ function Submit() {
         return false;
     }
 
-    if (femail != '' && fpassword != '') {
+    if (femail !== '' && fpassword !== '') {
 
-        for (i = 0; users.length >= i; i++) {
+        for (i = 0; users.length >= i; i + 1) {
             if (users[i].email === femail) {
                 if (users[i].password === fpassword) {
                     alert('Login Successfully');
@@ -38,8 +36,8 @@ function Submit() {
 
 }
 
-var ecount = 0;
-var femaillength = 0;
+ecount = 0;
+femaillength = 0;
 $(".form-control-email").keypress(function (event) {
     $(".form-group-email").addClass("has-error");
     $(".fcfe").addClass("glyphicon glyphicon-warning-sign");
@@ -57,11 +55,11 @@ $(".form-control-email").keypress(function (event) {
 
 
 $(".form-control-email").keydown(function (event) {
-    if (event.which == 8) {
+    if (event.which === 8) {
 
         var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
-        var femail = document.form.email.value,
-            emaillength = femail.length - 2;
+        femail = document.form.email.value;
+        emaillength = femail.length - 2;
 
         if (emaillength < femaillength) {
             $(".form-group-email").addClass("has-error");

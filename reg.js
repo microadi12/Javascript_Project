@@ -1,7 +1,8 @@
+var fcount, lcount, ercount, fphone, phoneRegex, ffphone, emailRegex, femail, pcount, fpass, passRegex, fpasss, frpasss, rpassCount, $;
+
+
 $(document).ready(function () {
-
-
-    var fcount = 0;
+    fcount = 0;
     $("#fname").keypress(function (event) {
 
         fcount++;
@@ -18,7 +19,7 @@ $(document).ready(function () {
 
     });
     $("#fname").keydown(function (e) {
-        if (e.which == 8) {
+        if (e.which === 8) {
             fcount--;
             if (fcount < 1) {
                 fcount = 0;
@@ -35,7 +36,7 @@ $(document).ready(function () {
     });
 
     //////////////////// validation for lastname/////////////////////////
-    var lcount = 0;
+    lcount = 0;
     $("#lname").keypress(function (event) {
 
         lcount++;
@@ -52,7 +53,7 @@ $(document).ready(function () {
 
     });
     $("#lname").keydown(function (e) {
-        if (e.which == 8) {
+        if (e.which === 8) {
             lcount--;
             if (lcount < 1) {
                 lcount = 0;
@@ -65,18 +66,17 @@ $(document).ready(function () {
                 $(".form-control-feedback-lname").removeClass("glyphicon glyphicon glyphicon-ok");
                 $(".form-control-feedback-lname").addClass("glyphicon glyphicon glyphicon-warning-sign");
             }
-            console.log(lcount);
         }
     });
     //////////////////////Validation for phone //////////////////////////////
-    var ercount = 0;
-    var fphone = "";
+    ercount = 0;
+    fphone = "";
     $("#phone").keyup(function (event) {
         $(".phonein").addClass("has-error");
         $(".form-control-feedback-phone").addClass("glyphicon glyphicon-warning-sign");
         document.regform.regphone.focus();
-        var phoneRegex = /^[0-9]{10}$/;
-        var fphone = document.regform.regphone.value;
+        phoneRegex = /^[0-9]{10}$/;
+        fphone = document.regform.regphone.value;
         if (phoneRegex.test(fphone)) {
 
             $(".phonein").removeClass("has-error");
@@ -91,8 +91,8 @@ $(document).ready(function () {
 
     $("#phone").keyup(function (event) {
 
-        var phoneRegex = /^[0-9]{10}$/;
-        var ffphone = document.regform.regphone.value;
+        phoneRegex = /^[0-9]{10}$/;
+        ffphone = document.regform.regphone.value;
 
         if (!phoneRegex.test(ffphone)) {
             $(".phonein").addClass("has-error");
@@ -114,7 +114,7 @@ $(document).ready(function () {
     });
 
     ////////////////////// Validation for email //////////////////////////////
-    var ercount = 0;
+    ercount = 0;
     $("#email").keypress(function (event) {
         $(".ein").addClass("has-error");
         $(".form-control-feedback-email").addClass("glyphicon glyphicon-warning-sign");
@@ -135,8 +135,8 @@ $(document).ready(function () {
 
     $("#email").keydown(function (event) {
 
-        var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
-        var femail = document.regform.regemail.value;
+        emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+        femail = document.regform.regemail.value;
 
         if (!emailRegex.test(femail)) {
 
@@ -154,8 +154,8 @@ $(document).ready(function () {
     });
 
     ///////////////////////// validation for pass/////////////////\
-    var pcount = 0;
-    var fpass = "";
+    pcount = 0;
+    fpass = "";
     $("#pass").keyup(function (event) {
         document.querySelector('.aaa').innerHTML = "Must Contain {a-z,A-Z,@#$,0-9}";
         $(".pin").addClass("has-error");
@@ -177,8 +177,8 @@ $(document).ready(function () {
 
 
     $("#pass").keyup(function (e) {
-        var passRegex = /^.*(?=.{6,10})(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).*$/;
-        var fpasss = document.regform.regpass.value;
+        passRegex = /^.*(?=.{6,10})(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).*$/;
+        fpasss = document.regform.regpass.value;
 
         if (!passRegex.test(fpasss)) {
 
@@ -198,7 +198,7 @@ $(document).ready(function () {
     /////////////////////////////////////////////////////////////////////
     $("#rpass").keyup(function (e) {
 
-        var frpasss = document.regform.reegpass.value;
+        frpasss = document.regform.reegpass.value;
 
         if ((frpasss === fpass) && (frpasss.length === fpass.length)) {
             $(".form-control-feedback-rpass").removeClass("glyphicon glyphicon-warning-sign");
@@ -215,13 +215,13 @@ $(document).ready(function () {
             $(".rpin").addClass("has-error");
         }
     });
-    var rpassCount = 0;
+    rpassCount = 0;
     $("#rpass").keyup(function (e) {
         rpassCount++;
-        if (e.which == 8) {
+        if (e.which === 8) {
             var frrpasss = document.regform.reegpass.value;
 
-            if (fpass != frrpasss) {
+            if (fpass !== frrpasss) {
                 $(".rpin").addClass("has-error");
                 $(".form-control-feedback-rpass").addClass("glyphicon glyphicon-warning-sign");
 
@@ -238,9 +238,9 @@ $(document).ready(function () {
     });
 
     $('input[type="checkbox"]').click(function () {
-        if ($(this).prop("checked") == true) {
+        if ($(this).prop("checked") === true) {
             return true;
-        } else if ($(this).prop("checked") == false) {
+        } else if ($(this).prop("checked") === false) {
             return false;
         }
     });

@@ -6,19 +6,19 @@
 
 body {
     background: #ffc185;
-    font-size:16px;
+    font-size: 16px;
 }
 
-.container{
-    position:absolute;
+.container {
+    position: absolute;
     width: auto;
-    height:auto;
+    height: auto;
     top: calc(50% - 240px);
     left: calc(50% - 160px);
 }
 
-.span-success{
-	color: green;
+.span-success {
+    color: green;
     position: relative;
     top: -23px;
     font-size: 1.4rem;
@@ -29,7 +29,7 @@ form {
     text-align: center;
     background: #fff;
     width: 310px;
-    
+
     border-radius: 5px;
     padding: 30px 20px 0 20px;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
@@ -53,18 +53,19 @@ p > span {
 }
 
 h3 {
-        font-family: 'Dosis';
+    font-family: 'Dosis';
     font-size: 35px;
     text-transform: uppercase;
     color: #87613d;
     margin-bottom: 20px;
-   margin-top: -22px;
+    margin-top: -22px;
 }
+
 }
 
 input,
-button{
-    outline: none !important; 
+button {
+    outline: none !important;
 }
 
 
@@ -86,17 +87,17 @@ button.form-btn.sx {
     border-radius: 0 0 0 5px;
     background-color: rgba(255, 125, 0, 0.35);
     color: #fff;
-    transition:all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 button.form-btn.sx:hover {
-    background-color:rgba(255, 125, 0, 0.65);
+    background-color: rgba(255, 125, 0, 0.65);
     color: #fff;
 }
 
 button.form-btn.sx.back {
     background-color: rgba(0, 0, 0, 0.15);
-    transition:all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 button.form-btn.sx.back:hover {
@@ -119,40 +120,40 @@ input {
     color: #ff7d00;
     text-align: center;
     font-size: 21px;
-    font-weight:100;
-    margin-bottom:15px;
+    font-weight: 100;
+    margin-bottom: 15px;
 }
 
-#terms{
+#terms {
     margin-left: -1px;
 }
 
-.terms-text{
-    margin-left: 
+.terms-text {
+    margin-left:
 }
 
 ::-webkit-input-placeholder {
-   color: #ffc185;
+    color: #ffc185;
     font-family: 'Roboto';
-    font-weight:100;
+    font-weight: 100;
 }
 
 :-moz-placeholder {
-   color: #ffc185;  
+    color: #ffc185;
     font-family: 'Roboto';
-    font-weight:100;
+    font-weight: 100;
 }
 
 ::-moz-placeholder {
-   color: #ffc185;  
+    color: #ffc185;
     font-family: 'Roboto';
-    font-weight:100;
+    font-weight: 100;
 }
 
-:-ms-input-placeholder {  
-   color: #ffc185; 
+:-ms-input-placeholder {
+    color: #ffc185;
     font-family: 'Roboto';
-    font-weight:100;
+    font-weight: 100;
 }
 
 .signIn input,
@@ -160,54 +161,54 @@ input {
     width: 100%;
 }
 
-.signIn{
-        z-index: 1;
-        transform: perspective(100px) translate3d(100px, 0px, -30px);
-        opacity: 0.5;
+.signIn {
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
     height: 476px;
 }
 
 .signUp {
-   z-index: 2;
+    z-index: 2;
     height: 560px;
-    
+
     top: -23px;
 }
 
 
 
-.active-dx{
+.active-dx {
     animation-name: foregrounding-dx;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
 }
 
-.active-sx{
+.active-sx {
     animation-name: foregrounding-sx;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
 }
 
-.inactive-dx{
+.inactive-dx {
     animation-name: overshadowing-dx;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
 }
 
-.inactive-sx{
+.inactive-sx {
     animation-name: overshadowing-sx;
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
 }
 
 @keyframes overshadowing-dx {
-    0%{
-        z-index:2;
+    0% {
+        z-index: 2;
         transform: perspective(100px) translate3d(0px, 0px, 0px);
         opacity: 1;
         box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
     }
-    100%{
+    100% {
         z-index: 1;
         transform: perspective(100px) translate3d(100px, 0px, -30px);
         opacity: 0.5;
@@ -216,13 +217,13 @@ input {
 }
 
 @keyframes overshadowing-sx {
-    0%{
-        z-index:2;
+    0% {
+        z-index: 2;
         transform: perspective(100px) translate3d(0px, 0px, 0px);
         opacity: 1;
         box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
     }
-    100%{
+    100% {
         z-index: 1;
         transform: perspective(100px) translate3d(-100px, 0px, -30px);
         opacity: 0.5;
@@ -231,34 +232,34 @@ input {
 }
 
 @keyframes foregrounding-dx {
-    0%{
-        z-index:1;
+    0% {
+        z-index: 1;
         transform: perspective(100px) translate3d(100px, 0px, -30px);
         opacity: 0.5;
     }
-    50%{
-        z-index:2;
+    50% {
+        z-index: 2;
         transform: perspective(100px) translate3d(400px, 0px, -30px);
     }
-    100%{
-        z-index:2;
+    100% {
+        z-index: 2;
         transform: perspective(100px) translate3d(0px, 0px, 0px);
         opacity: 1;
     }
 }
 
 @keyframes foregrounding-sx {
-    0%{
-        z-index:1;
+    0% {
+        z-index: 1;
         transform: perspective(100px) translate3d(-100px, 0px, -30px);
         opacity: 0.5;
     }
-    50%{
-        z-index:2;
+    50% {
+        z-index: 2;
         transform: perspective(100px) translate3d(-400px, 0px, -30px);
     }
-    100%{
-        z-index:2;
+    100% {
+        z-index: 2;
         transform: perspective(100px) translate3d(0px, 0px, 0px);
         opacity: 1;
     }
@@ -283,81 +284,35 @@ input {
     float: right;
     font-size: 1.3rem;
 }
+
 .rc-anchor-light.rc-anchor-normal {
     border: 1px solid #d3d3d3;
 }
-styles__ltr.css:1
-.rc-anchor-light {
+
+styles__ltr.css:1 .rc-anchor-light {
     background: #f9f9f9;
     color: #000;
 }
-styles__ltr.css:1
-.rc-anchor-normal {
+
+styles__ltr.css:1 .rc-anchor-normal {
     height: 74px;
     width: 88%;
 }
-styles__ltr.css:1
-.rc-anchor {
+
+styles__ltr.css:1 .rc-anchor {
     border-radius: 3px;
-    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
-    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
-    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.08);
 }
-user agent stylesheet
-div {
+
+user agent stylesheet div {
     display: block;
 }
-margin?
-?border1
-1padding?
-?240 × 74?
-?1
-1?
-?
 
-Filter
-
-Show all
-background-attachment:
-scroll
-;
-background-clip:
-border-box
-;
-background-color:
-rgb(249, 249, 249)
-;
-background-image:
-none
-;
-background-origin:
-padding-box
-;
-background-position-x:
-0%
-
-
-.recatcha_container {
-    width: 80%;
-}
-
-.recatcha_container iframe {
-    position: relative;
-    margin-left: -32px;
-    width: 100%;
-}
-
-
-.control {
-        color: #ff7d00;
-        font-size: 18px;
-        padding: 0.2rem 1.75rem;
-        border: 1px solid #ffc185;
-    
-}
-.swal-text{
-        text-align: center;
-    
-    font-weight: 700;
-    color: rgba(187, 74, 99, 0.64);
-}
+margin? ?border1 1padding? ?240 Ã— 74? ?1 1? ? Filter Show all background-attachment: scroll;
+background-clip: border-box;
+background-color: rgb(249, 249, 249);
+background-image: none;
+background-origin: padding-box;
+background-position-x: 0%

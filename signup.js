@@ -1,4 +1,4 @@
-var users;
+var $, users, firstname, lastname, phone, femail, fpassword, repassword, refferal, ischecked;
 
 window.onload = function () {
     users = JSON.parse(window.localStorage.getItem('Users'));
@@ -10,52 +10,52 @@ function newregister() {
     var passwordRegex = /^.*(?=.{6,10})(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).*$/;
 
 
-    var firstname = document.regform.fname.value;
-    var lastname = document.regform.lname.value;
-    var phone = document.regform.regphone.value
-    var femail = document.regform.regemail.value;
-    var fpassword = document.regform.regpass.value;
-    var repassword = document.regform.reegpass.value;
-    var refferal = document.regform.refferrr.value;
-    var ischecked = $('input[type = "checkbox"]').prop('checked');
+    firstname = document.regform.fname.value;
+    lastname = document.regform.lname.value;
+    phone = document.regform.regphone.value
+    femail = document.regform.regemail.value;
+    fpassword = document.regform.regpass.value;
+    repassword = document.regform.reegpass.value;
+    refferal = document.regform.refferrr.value;
+    ischecked = $('input[type = "checkbox"]').prop('checked');
 
-    if (firstname == "") {
+    if (firstname === "") {
         document.regform.fname.focus();
         return false;
     }
-    if (lastname == "") {
+    if (lastname === "") {
         document.regform.lname.focus();
         return false;
     }
-    if (femail == "") {
+    if (femail === "") {
         document.regform.regemail.focus();
 
         return false;
     }
 
-    if (fpassword == "") {
+    if (fpassword === "") {
         document.regform.regpass.focus();
         return false;
     }
 
-    if (repassword == "") {
+    if (repassword === "") {
         document.regform.reegpass.focus();
         return false;
-    } else if (repassword != fpassword) {
+    } else if (repassword !== fpassword) {
         document.regform.reegpass.focus();
         return false;
     }
-    if (refferal == "") {
+    if (refferal === "") {
         document.regform.refferrr.focus();
         return false;
     }
-    if (ischecked == false) {
+    if (ischecked === false) {
         alert("please check under terms and condition!");
         return false;
 
     }
 
-    if (firstname != " " && lastname != " " && femail != " " && fpassword != " " && repassword != " " && refferal != " " && ischecked != false) {
+    if (firstname !== " " && lastname !== " " && femail !== " " && fpassword !== " " && repassword !== " " && refferal !== " " && ischecked !== false) {
 
         var map = {
             'Firstname': firstname,
